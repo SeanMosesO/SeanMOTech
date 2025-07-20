@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sean Moses Okonofua | Web Developer</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        header {
+            background-color: #1e1e2f;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2e2e3f;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        nav a {
+            color: #fff;
+            padding: 1rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #444;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .section {
+            padding: 2rem 1rem;
+            max-width: 900px;
+            margin: auto;
+            animation: fadeInUp 1.5s ease-in;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .project {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background-color: #1e1e2f;
+            color: white;
+        }
+
+        button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #556cd6;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Sean Moses Okonofua</h1>
+        <p>Web Developer | Frontend Specialist | UI/UX Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+    </nav>
+
+    <div class="hero">
+        <h2>Crafting modern websites with precision and creativity</h2>
+        <p>Clean code. Responsive design. Seamless experience.</p>
+    </div>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Sean Moses Okonofua, a passionate web developer with expertise in HTML, CSS, JavaScript, and modern frontend frameworks. I love transforming ideas into beautiful, functional websites that deliver great user experiences.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio showcasing my work and skills.</p>
+            </div>
+            <div class="project">
+                <h3>Task Manager App</h3>
+                <p>A web application for managing tasks and improving productivity.</p>
+            </div>
+            <div class="project">
+                <h3>Responsive Blog</h3>
+                <p>A mobile-friendly blog with dynamic content and clean design.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <h2>Blog</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Getting Started with React</h3>
+                <p>Tips and resources to begin your journey with React.js.</p>
+            </div>
+            <div class="project">
+                <h3>CSS Grid vs Flexbox</h3>
+                <p>Understanding the strengths and use-cases of both layout systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+        <p style="text-align:center;">Phone: <a href="tel:+2349138301571">+234 913 830 1571</a> | Email: <a href="mailto:seanmosesokonofua@gmail.com">seanmosesokonofua@gmail.com</a></p>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formResponse" style="text-align:center; margin-top:1rem;"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sean Moses Okonofua. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showContactInfo() {
+            const info = document.getElementById('contactInfo');
+            info.style.display = 'block';
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            document.getElementById('formResponse').textContent = 'Thank you! Your message has been sent.';
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
+
+A "CV" link has been added to the navigation bar. It points to cv.pdf, so make sure your CV file is named cv.pdf and located in the same directory as your HTML file. Let me know if you'd like to customize the appearance or location of the link.
